@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let circle = function (radius) {
+        this.radius = radius;
+        this.getArea = function () {
+            return Math.PI * this.radius * this.radius;
+        }
+        this.getRadius = function () {
+            return this.radius;
+        }
+    }
+
+    class circle2 {
+        constructor(radius) {
+            this.radius = radius;
+        }
+
+        getArea () {
+            return this.radius * this.radius * Math.PI;
+        }
+
+        getRadius () {
+            return this.radius;
+        }
+    }
+
+    let myCircleS = new circle2(2)
+    let myRadius = myCircleS.getRadius();
+    let myArea = myCircleS.getArea();
+    alert("radius: " + myRadius + " Area: " + myArea);
+</script>
+</body>
+</html>
