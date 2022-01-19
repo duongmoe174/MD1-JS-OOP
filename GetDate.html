@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GetDate</title>
+</head>
+<body>
+<script>
+    // let myDate = function (day, month, year) {
+    //     this.day = day;
+    //     this.month = month;
+    //     this.year = year;
+    //     this.getDay = function () {
+    //         return this.day;
+    //     }
+    //     this.getMonth = function () {
+    //         return this.month;
+    //     }
+    //     this.getYear = function () {
+    //         return this.year;
+    //     }
+    //     this.setDay = function (day) {
+    //         this.day = day;
+    //     }
+    //     this.setMonth = function (month) {
+    //         this.month = month;
+    //     }
+    //     this.setYear = function (year) {
+    //         this.year = year;
+    //     }
+    // }
+    // let today = new myDate(18, 2, 2022)
+    // let todayDay = today.getDay();
+    // let todayMonth = today.getMonth();
+    // let todayYear = today.getYear();
+    // todayDay.setDay(21);
+    // todayMonth.setMonth(12);
+    // todayYear.setYear(2012);
+    // alert(todayDay + "/" + todayMonth + "/" + todayYear);
+
+    class myDate2 {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay () {
+            return this.day;
+        }
+        getMonth () {
+            return this.month;
+        }
+        getYear () {
+            return this.year;
+        }
+        setDay (day) {
+            return this.day = day;
+        }
+        setMonth (month) {
+            return this.month = month;
+        }
+        setYear (year) {
+            return this.year = year;
+        }
+        setDate (day, month, year) {
+            if (day < 10) {
+                this.day = "0" + day;
+            } else {
+                this.day = day;
+            }
+           if (month < 10) {
+               this.month = "0" + month;
+           } else {
+               this.month = month
+           }
+            this.year = year;
+            let string = this.day + "/" + this.month + "/" + this.year;
+            return string;
+        }
+    }
+    let myToday = new myDate2(1, 1, 2019)
+    // let day = myToday.getDay();
+    // let month = myToday.getMonth();
+    // let year = myToday.getYear();
+    // alert(day + "/" + month + "/" + year);
+   let stringDate = myToday.setDate(20, 10, 2010)
+    alert(stringDate);
+
+
+</script>
+</body>
+</html>

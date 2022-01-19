@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+        convertCtoK (c) {
+            return this.c + 273;
+        }
+        convertCtoF (c) {
+            return this.c * 1.8 + 32
+        }
+    }
+    let toDay = new Temperature(25);
+    let F = toDay.convertCtoF(25);
+    let K = toDay.convertCtoK(25);
+    console.log(F);
+    console.log(K);
+</script>
+</body>
+</html>
